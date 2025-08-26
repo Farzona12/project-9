@@ -1,14 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my portfoli</title>
     <link rel="stylesheet" href="./output.css">
-</head>
-<body>
+    <style>
+        /* Simple scroll-reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all .7s ease;
+        }
 
-    
-    
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Skills bar animation */
+        .bar {
+            transition: width 1.5s ease;
+        }
+    </style>
+
+</head>
+
+<body class="font-lora">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+    </style>
+
+    <header
+        class="p-[20px_50px] fixed top-0 w-[100%] bg-no-repeat bg-center flex items-center bg-[url('./img/Background.svg')] h-auto justify-between">
+        <div>
+            <p class="font-ballet cursor-pointer select-none font-[600] text-white text-[35px] italic">Farzona</p>
+        </div>
+
+        <div class="flex text-white items-center gap-[20px]">
+        </div>
+
+        <nav
+            class="flex mr-[140px] items-center m-0 p-0 w-[450px] h-[56px] bg-[#00000033] rounded-[72px] justify-center gap-[35px]">
+
+            <a href="#"
+                class="text-[#b7b7b7] hover:font-semibold hover:flex hover:items-center hover:justify-center hover:h-[46px] hover:rounded-[70px] hover:bg-[gray] hover:w-[70px] hover:text-white cursor-pointer">
+                Home</a>
+
+            <a class="text-[#b7b7b7] hover:flex hover:font-semibold hover:items-center hover:justify-center hover:h-[46px] hover:rounded-[70px] hover:bg-[gray] hover:w-[70px] hover:text-white cursor-pointer"
+                href="##">
+                About</a>
+
+            <a href="###"
+                class="text-[#b7b7b7] hover:font-semibold hover:flex hover:items-center hover:justify-center hover:h-[46px] hover:rounded-[70px] hover:bg-[gray] hover:w-[70px] hover:text-white cursor-pointer">
+                Skills</a>
+
+            <a class="text-[#b7b7b7] hover:font-semibold hover:flex hover:items-center hover:justify-center hover:h-[46px] hover:rounded-[70px] hover:bg-[gray] hover:w-[90px] hover:text-white cursor-pointer"
+                href="####">
+                Services</a>
+
+            <a class="text-[#b7b7b7] hover:text-white hover:font-semibold hover:flex hover:items-center hover:justify-center hover:h-[46px] hover:rounded-[70px] hover:bg-[gray] hover:w-[90px] font-[600] cursor-pointer"
+                href="#####">
+                Portfolio</a>
+
+        </nav>
+
+        <button
+            class="hover:text-[#000000] text-white font-[600] bg-[#00000033] mb:hidden hover:bg-[#ffffff] rounded-[100px] w-[130px] h-[50px]">Contact</button>
+
+    </header>
+
+    <main>
+        <section class="m-[200px_50px] flex items-center justify-center gap-[200px]">
+            <div>
+                <p class="text-[70px] font-[700] font-garamond">Farzona Haitova</p>
+                <p class="text-[32px] font-lora">And I'm a <span class="text-[#547796] font-[700]">Frontend
+                        Developer</span>
+                </p>
+                <p class="font-[600] leading-[26px] mt-[20px]">I'm professional web developer with strong skill in HTML,
+                    <br>
+                    CSS, Tailwind, Sass etc. I have working in this <br>
+                    field almost 3 month and all projects are complited successfully <br>
+                    with 100% client satisfiction.
+                </p>
+                <img class="w-[150px] mt-[20px]" src="./img/Screenshot 2025-08-26 133407.png">
+            </div>
+            <img class="w-[500px]" src="./img/me.jpg">
+        </section>
+
+        <section class="mb-[100px] flex items-center justify-center">
+            <div>
+
+                <p class="text-center text-[60px] mt-[100px] mb-[100px]">About <span
+                        class="text-[#547796] font-[700]">Me</span></p>
+
+                <div class="flex items-center gap-[100px] p-[112px] w-[1200px] shadow-2xl">
+                    <img class="rounded-[10px] w-[400px]" src="./img/he.JPG">
+                    <div>
+                        <p class="text-[#132238] text-[40px] leading-[50px] font-garmond font-[700]">I am Professional
+                            User Experience Designer</p>
+                        <p>I design and develop services for customers specializing creating stylish, modern websites,
+                            web services and online stores. My passion is to design digital user experiences. <br><br>I
+                            design and develop services for customers specializing creating stylish, modern websites,
+                            web services.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="bg-base-200 py-24">
+
+            <div class="mx-auto max-w-7xl px-6">
+
+                <div class="reveal text-center mb-12">
+
+                    <h2 class="text-[60px] text-[#132238] font-[650]">Skills</h2>
+
+                    <p class="py-[20px] w-[100%] font-[600]">A quick snapshot of my current level.</p>
+
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-[50px]">
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-center gap-[20px]">
+                            <img class="w-[70px]" src="./img/html.svg">
+                            <div class="reveal">
+
+                                <div class="flex mb-2"><span class="w-[400px]">HTML</span><span>90%</span></div>
+
+                                <div class="h-5 bg-gray-500 rounded-full overflow-hidden">
+
+                                    <div class="bar h-5 bg-gradient-to-r to-[#5347fc] from-[#13a3fc]  rounded-full w-0"
+                                        data-percent="90%"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-[20px]">
+                            <img class="w-[70px]" src="./img/css.svg">
+                            <div class="reveal">
+                                <div class="flex mb-2"><span class="w-[400px]">CSS</span><span>80%</span></div>
+
+                                <div class="h-5 bg-gray-500 rounded-full overflow-hidden">
+
+                                    <div class="bar h-5 bg-gradient-to-r to-[#5347fc] from-[#13a3fc]  rounded-full w-0"
+                                        data-percent="80%"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-[20px]">
+                            <img class="w-[70px]" src="./img/figma.svg">
+                            <div class="reveal">
+
+                                <div class="flex mb-2"><span class="w-[400px]">Figma</span><span>50%</span></div>
+
+                                <div class="h-5 bg-gray-500 rounded-full overflow-hidden">
+
+                                    <div class="bar h-5 bg-gradient-to-r to-[#5347fc] from-[#13a3fc]  rounded-full w-0"
+                                        data-percent="50%"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-center gap-[20px]">
+                            <img class="w-[70px]" src="./img/tailwind.svg">
+                            <div class="reveal">
+
+                                <div class="flex mb-2"><span class="w-[400px]">Tailwind</span><span>70%</span></div>
+
+                                <div class="h-5 bg-gray-500 rounded-full overflow-hidden">
+
+                                    <div class="bar h-5 bg-gradient-to-r to-[#5347fc] from-[#13a3fc]  rounded-full w-0"
+                                        data-percent="70%"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-[20px]">
+                            <img class="w-[70px]" src="./img/JS.svg">
+                            <div class="reveal">
+
+                                <div class="flex mb-2"><span class="w-[400px]">JavaScript</span><span>40%</span></div>
+
+                                <div class="h-5 bg-gray-500 rounded-full overflow-hidden">
+
+                                    <div class="bar h-5 bg-gradient-to-r to-[#5347fc] from-[#13a3fc]  rounded-full w-0"
+                                        data-percent="40%"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-[20px]">
+                            <img class="w-[70px]" src="./img/react.svg">
+                            <div class="reveal">
+
+                                <div class="flex mb-2"><span class="w-[400px]">React</span><span>30% </span>
+                                </div>
+
+                                <div class="h-5 bg-gray-500 rounded-full overflow-hidden">
+
+                                    <div class="bar h-5 bg-gradient-to-r to-[#5347fc] from-[#13a3fc]  rounded-full w-0"
+                                        data-percent="30%"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="mb-[200px]">
+            <p class="text-center text-[60px] mt-[100px] mb-[100px]">My <span
+                    class="text-[#00EEFF] font-[700]">Services</span></p>
+
+            <div class="flex justify-center items-center gap-[50px]">
+                <div
+                    class="bg-[#1F242D] border-[#00EEFF] border-[2px] border-solid rounded-[16px] w-[385px] shadow-[0px_0px_5px_10px_#000000] pt-[50px] px-[20px] h-[484px]">
+                    <div class="flex items-center justify-center">
+                        <img class="mb-[25px]" src="./img/web dis.svg">
+                    </div>
+                    <p class="text-[#00EEFF] mb-[20px] text-[30px] font-[700] text-center">Web Design</p>
+                    <p class="text-center text-white font-[700] mb-[30px]">I am professional Web Developer. I have
+                        designed more than 50 web template for my client. You can hire me for design your personal,
+                        business or other website template. You can trust me. I complied your work with your full
+                        satisfaction </p>
+                    <div class="flex items-center justify-center">
+                        <button
+                            class="w-[288px] hover:text-white font-[700] hover:bg-[#00EEFF] h-[35px] bg-white rounded-[20px]">Hire
+                            Me</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#1F242D] rounded-[16px] w-[385px] border-[#00EEFF] border-[2px] border-solid shadow-[0px_0px_5px_10px_#000000] pt-[50px] px-[20px] h-[484px]">
+                    <div class="flex items-center justify-center">
+                        <img class="mb-[25px]" src="./img/web.svg">
+                    </div>
+                    <p class="text-[#00EEFF] mb-[20px] text-[30px] font-[700] text-center">Web Development</p>
+                    <p class="text-center text-white font-[700] mb-[30px]">I am professional Web Developer. I have
+                        designed more than 50 web template for my client. You can hire me for design your personal,
+                        business or other website template. You can trust me. I complied your work with your full
+                        satisfaction </p>
+                    <div class="flex items-center justify-center">
+                        <button
+                            class="w-[288px] font-[700] hover:text-white hover:bg-[#00EEFF] h-[35px] bg-white rounded-[20px]">Hire
+                            Me</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-[#1F242D] border-[#00EEFF] border-[2px] border-solid rounded-[16px] w-[385px] shadow-[0px_0px_5px_10px_#000000] pt-[50px] px-[20px] h-[484px]">
+                    <div class="flex items-center justify-center">
+                        <img class="mb-[25px]" src="./img/grafik.svg">
+                    </div>
+                    <p class="text-[#00EEFF] mb-[20px] text-[30px] font-[700] text-center">Graphic Design</p>
+                    <p class="text-center text-white font-[700] mb-[30px]">I am professional Web Developer. I have
+                        designed more than 50 web template for my client. You can hire me for design your personal,
+                        business or other website template. You can trust me. I complied your work with your full
+                        satisfaction </p>
+                    <div class="flex items-center justify-center">
+                        <button
+                            class="w-[288px] hover:text-white hover:bg-[#00EEFF] font-[700] h-[35px] bg-white rounded-[20px]">Hire
+                            Me</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-[100px]">
+            <p class="text-center text-[60px] mt-[100px] mb-[100px]">Contact <span class="text-[#547796] font-[700]">
+                    Me</span></p>
+
+            <div class="flex items-center mx-[50px] justify-between">
+                <div>
+                    <div>
+                        <p class="font-ballet cursor-pointer select-none font-[600] text-[35px] italic">
+                            Farzona</p>
+                    </div>
+                    <p class="font-[600] leading-[26px] mt-[20px]">I am professional Web designer. I have designed more
+                        <br> than 50 web template for my client. You can hire me for <br> design your personal, business
+                        or other website <br> template. You can trust me. I complied your work with <br> your full
+                        satisfiction </p>
+                    <img class="w-[150px] mt-[30px]" src="./img/Screenshot 2025-08-26 133421.png">
+                </div>
+                <div>
+                    <div class="flex items-center gap-[20px]">
+                        <div>
+                            <input
+                                class="w-[284px] h-[53px] rounded-[10px] bg-[#1F242DCC] block placeholder:text-white pl-[15px] placeholder:font-[700] outline-[#000000]"
+                                type="text" placeholder="First Name">
+                            <input
+                                class="w-[284px] h-[53px] rounded-[10px] bg-[#1F242DCC] mt-[20px] placeholder:text-white pl-[15px] placeholder:font-[700] outline-[#000000]"
+                                type="tel" placeholder="Phone">
+                        </div>
+                        <div>
+                            <input
+                                class="w-[284px] h-[53px] rounded-[10px] bg-[#1F242DCC] block placeholder:text-white pl-[15px] placeholder:font-[700] outline-[#000000]"
+                                type="text" placeholder="Last Name">
+                            <input
+                                class="w-[284px] h-[53px] rounded-[10px] bg-[#1F242DCC] mt-[20px] placeholder:text-white pl-[15px] placeholder:font-[700] outline-[#000000]"
+                                type="text" placeholder="Subject">
+                        </div>
+                    </div>
+                    <input
+                                class="w-[589px] h-[53px] rounded-[10px] bg-[#1F242DCC] mt-[20px] block placeholder:text-white pl-[15px] placeholder:font-[700] outline-[#000000]"
+                                type="email" placeholder="Email">
+
+                    <textarea class="w-[589px] pt-[20px] max-h-[117px] rounded-[10px] bg-[#1F242DCC] mt-[20px] block placeholder:text-white pl-[15px] placeholder:font-[700] outline-[#000000]" placeholder="Message"></textarea>
+                    <button class="w-[589px] h-[53px] rounded-[10px] bg-[#1F242DCC] mt-[20px] block text-white font-[700] outline-[#000000]">Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-[30px_50px] pr-[100px] pt-[40px] w-[100%] bg-no-repeat bg-center flex items-center bg-[url('./img/Background.svg')] h-auto justify-between">
+        <p class="font-[700]">Copywrite 2025 All Rights Reserved By Farzona.</p>
+        <div class="border-[#00EEFF] border-solid border-[1.5px] rounded-[3px]">
+            <img src="./img/up-arrow-alt-solid-48 1 (1).svg">
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // Reveal on scroll
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('show');
+                    // animate skill bars when skills section appears
+                    if (e.target.id === 'skills' || e.target.closest('#skills')) {
+                        document.querySelectorAll('#skills .bar').forEach(el => {
+                            const p = el.getAttribute('data-percent') || '0%';
+                            el.style.width = p;
+                        });
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal, section').forEach(el => io.observe(el));
+    </script>
+
+
 </body>
 </html>
+
+
+
+
+<!-- bg-[url('./img/Background.svg'),url('./img/image1.svg')] bg-center bg-no-repeat h-[90vh] -->

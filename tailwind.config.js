@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}",""],
+  content: ["./*.{html,js}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ballet: ['"Ballet"', 'cursive'],
+        garmond: ["Cormorant Garamond", 'serif'],
+        lora: ['Lora', 'serif'],
+        garamond: ['Cormorant Garamond', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
